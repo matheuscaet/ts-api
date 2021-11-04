@@ -12,7 +12,6 @@ const ItemSchema: Schema = new Schema(
 );
 
 ItemSchema.post<IItem>('save', function () {
-   // logging.info('Mongo', 'Checkout the Item we just saved: ', this);
    console.log('Checkout the Item we just saved: ', this)
 });
 
