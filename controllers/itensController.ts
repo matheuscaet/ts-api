@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 import Item from '../models/item';
 
 const createItem = (req: Request, res: Response, next: NextFunction) => {
-    let { author, title } = req.body;
+    let { name, desc } = req.body;
 
     const item = new Item({
         _id: new mongoose.Types.ObjectId(),
-        author,
-        title
+        name,
+        desc
     });
 
     return item
