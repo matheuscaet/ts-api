@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import Item from '../models/item';
 
 const createItem = (req: Request, res: Response, next: NextFunction) => {
+
     let { name, desc } = req.body;
 
     const item = new Item({

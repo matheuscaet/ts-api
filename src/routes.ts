@@ -16,7 +16,7 @@ mongoose
     });
 
 routes.get('/itens', itensController.getAllItems);
-routes.post('/itens', itensController.createItem);
+routes.post('/itens/create', itensController.createItem);
 
 
 export default routes;
