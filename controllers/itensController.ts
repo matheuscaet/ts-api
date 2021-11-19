@@ -1,6 +1,10 @@
 import { NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
 import Item from '../models/item';
+import { Database } from '../config/database';
+
+const connectdb =  new Database().ConnectToDB();
+
 
 const createItem = (req: Request, res: Response, next: NextFunction) => {
 
