@@ -1,11 +1,13 @@
 import  mongoose from "mongoose";
+import { App } from "./env/app.env";
 
 export class Database{
 
     ConnectToDB() : string {
         let errorMsg : string = '';
+        
         mongoose
-            .connect('mongodb+srv://matheuscaet:mongopassword20092021@cluster0.cfpvj.mongodb.net/myFirstDatabase?authSource=admin&replicaSet=atlas-1023j9-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true')
+            .connect(App.URLMONGO)
             .then((result) => {
                 errorMsg = 'Mongo Connected'
             })

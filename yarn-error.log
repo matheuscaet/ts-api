@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Matheus Caetano\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/dot-env --save
+  C:\Program Files\nodejs\node.exe C:\Users\Matheus Caetano\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/mongo --save
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Matheus Caetano\AppData\Local\Microsoft\WindowsApps;C:\Users\Matheus Caetano\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Matheus Caetano\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;C:\Users\Matheus Caetano\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fdot-env: Not found
+  Error: https://registry.yarnpkg.com/@types%2fmongo: Not found
       at Request.params.callback [as _callback] (C:\Users\Matheus Caetano\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
       at Request.self.callback (C:\Users\Matheus Caetano\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
       at Request.emit (node:events:390:28)
@@ -42,7 +42,8 @@ npm manifest:
     },
     "dependencies": {
       "@types/mongoose": "^5.11.97",
-      "dot-env": "^0.0.1",
+      "@types/node": "^16.11.9",
+      "dotenv": "^10.0.0",
       "express": "^4.17.1",
       "mongoose": "^6.0.12"
     }
@@ -106,6 +107,11 @@ Lockfile:
     version "16.11.6"
     resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
     integrity sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==
+  
+  "@types/node@^16.11.9":
+    version "16.11.9"
+    resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.9.tgz#879be3ad7af29f4c1a5c433421bf99fab7047185"
+    integrity sha512-MKmdASMf3LtPzwLyRrFjtFFZ48cMf8jmX5VRYrDQiJa8Ybu5VAmkqBWqKU8fdCwD8ysw4mQ9nrEHvzg6gunR7A==
   
   "@types/qs@*":
     version "6.9.7"
@@ -326,10 +332,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
     integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
   
-  dot-env@^0.0.1:
-    version "0.0.1"
-    resolved "https://registry.yarnpkg.com/dot-env/-/dot-env-0.0.1.tgz#e4434cb8c69143e445bc28a729437e4fabd88c80"
-    integrity sha1-5ENMuMaRQ+RFvCinKUN+T6vYjIA=
+  dotenv@^10.0.0:
+    version "10.0.0"
+    resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+    integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
   
   dynamic-dedupe@^0.3.0:
     version "0.3.0"
