@@ -23,6 +23,22 @@ const getAllItems = (req: Request, res: Response, next: NextFunction) => {
         });
 };
 
+const getItem = (req: Request, res: Response, next: NextFunction) => {
+    Item.findById(req.params.id)
+        .exec()
+        .then((Item) => {
+            return res.status(200).json({
+                Item: Item
+            });
+        })
+        .catch((error) => {
+            return res.status(500).json({
+                message: error.message,
+                error
+            });
+        });
+};
+
 const createItem = (req: Request, res: Response, next: NextFunction) => {
 
     let { name, desc } = req.body;
@@ -92,4 +108,4 @@ const deleteItem = (req: Request, res: Response, next: NextFunction) => {
         });
 };
 
-export default { createItem, getAllItems, updateItem, deleteItem };
+export default { createItem, getAllItems, getItem, updateItem, deleteItem };

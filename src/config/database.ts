@@ -17,12 +17,6 @@ export class Database{
         
         return errorMsg;
     }
-
-
-
-    
-
-
 }
 
 
