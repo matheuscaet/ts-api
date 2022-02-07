@@ -1,6 +1,5 @@
 import  mongoose from "mongoose";
 import { App } from "./env/app.env";
-
 export class Database{
 
     ConnectToDB() : string {
