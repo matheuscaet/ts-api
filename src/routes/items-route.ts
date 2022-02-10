@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router} from "express";
 import { ItemsController } from "../controllers/items-controller";
 import { Container } from 'typedi'
 

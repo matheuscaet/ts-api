@@ -4,25 +4,29 @@ import { Service, Container } from 'typedi';
 
 @Service()
 export class ItemsLogic{
+    private itemRepo : ItemsRepository
 
+    constructor(){
+        this.itemRepo = Container.get(ItemsRepository);
+    }
     async getAllItems() {
-        return await Container.get(ItemsRepository).getAllItems();
+        return await this.itemRepo.getAllItems();
     }
     
     async getItem(itemId: string) {
-        return await Container.get(ItemsRepository).getItem(itemId);
+        return await this.itemRepo.getItem(itemId);
     }
     
     async createItem(params : IItem) {
-        return await Container.get(ItemsRepository).createItem(params);
+        return await this.itemRepo.createItem(params);
     }
     
     async updateItem(params : IItem, itemId : string) {
-        return await Container.get(ItemsRepository).updateItem(params, itemId);
+        return await this.itemRepo.updateItem(params, itemId);
     }   
     
     async deleteItem(itemId : string) {
-        return await Container.get(ItemsRepository).deleteItem(itemId);
+        return await this.itemRepo.deleteItem(itemId);
     }
     
 }
