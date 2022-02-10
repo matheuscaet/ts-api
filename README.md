@@ -40,3 +40,11 @@ O preenchimento dessas variáveis são obrigatórias, então segue um exemplo de
 $ npm start
 
 ```
+
+### Rodando os Testes
+
+```bash
+# Execute os testes
+$ npm run test
+
+```
