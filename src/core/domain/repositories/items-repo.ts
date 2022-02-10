@@ -1,4 +1,4 @@
-import { IItem } from '../interfaces/_index';
+import { IItem } from '../../../shared/interfaces/_index';
 import Item from '../models/item';
 import BSON = require('bson');
 import { Service } from 'typedi';

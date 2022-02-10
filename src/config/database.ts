@@ -1,20 +1,19 @@
 import  mongoose from "mongoose";
+import { Service } from "typedi"
 import { App } from "./env/app.env";
+import logging from "@config/logging";
+@Service()
 export class Database{
 
-    ConnectToDB() : string {
-        let errorMsg : string = '';
-        
+    ConnectToDB() : void {
         mongoose
             .connect(App.URLMONGO)
             .then((result) => {
-                errorMsg = 'Mongo Connected'
+                logging.info(App.NAMESPACE, `Database Connected`)
             })
             .catch((error) => {
-                errorMsg =  'Erro: ' + error.message;
+                logging.error(App.NAMESPACE, `Database error: ${error.message}`)
             });
-        
-        return errorMsg;
     }
 }
 

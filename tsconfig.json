@@ -8,6 +8,18 @@
     "strict": true,
     "baseUrl": "./src",                                      /* Enable all strict type-checking options. */
     "skipLibCheck": true    ,                             /* Skip type checking all .d.ts files. */
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "paths": {
+      "@api/*": ["api/*"],
+      "@config/*": ["config/*"],
+      "@core/*": ["core/*"],
+      "@shared/*": ["shared/*"],
+      "@domain/*": ["core/domain/*"],
+      "@middlewares/*": ["api/middlewares/*"],
+      "@routes/*": ["api/routes/*"],
+      "@logic/*": ["api/logic/*"],
+      "@controllers/*": ["api/controllers/*"],
+      "@env/*": ["config/env/*"]
+    }
   }
 }

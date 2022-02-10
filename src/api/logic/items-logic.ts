@@ -1,5 +1,5 @@
-import { ItemsRepository } from "../repositories/items-repo";
-import { IItem } from "../interfaces/_index";
+import { ItemsRepository } from "@domain/repositories/items-repo";
+import { IItem } from "@shared/interfaces/_index";
 import { Service, Container } from 'typedi';
 
 @Service()
