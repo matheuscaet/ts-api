@@ -29,6 +29,10 @@ export class ExpressConfig {
   private routes() : void {
     this.app
       .use(items)
+  }
+
+  private middlewares() : void {
+    this.app
       .use(logRequest)
   }
   
@@ -41,6 +45,7 @@ export class ExpressConfig {
   public bootstrap(): void {
     this.config()
     this.routes()
+    this.middlewares()
     this.listen()
   }
 }

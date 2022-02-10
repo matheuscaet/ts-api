@@ -1,7 +1,5 @@
-import { Document } from 'mongoose';
-
-
-export interface IItem extends Document {
+export interface IItem {
+    _id?: string;
     name: string;
     desc: string;
 }

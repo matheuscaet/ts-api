@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes'
 import { Service, Container } from 'typedi'
-import { ItemsLogic } from '@logic/_index';
+import { ItemsLogic } from '@core/domain/logic/_index';
 
  
 @Service()

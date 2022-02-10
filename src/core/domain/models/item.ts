@@ -1,5 +1,9 @@
-import mongoose, { Schema } from 'mongoose';
-import { IItem } from '../../../shared/interfaces/item';
+import mongoose, { Schema, Document } from 'mongoose';
+
+interface IItem extends Document {
+    name: string;
+    desc: string;
+}
 
 const ItemSchema: Schema = new Schema(
     {
