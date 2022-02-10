@@ -41,7 +41,7 @@ $ npm start
 
 ```
 
-### Rodando os Testes
+### 🧪 Rodando os Testes
 
 ```bash
 # Execute os testes
