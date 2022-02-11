@@ -10,6 +10,7 @@ As tecnologias abaixo foram utilizadas:
 - [TypeScript](https://www.typescriptlang.org/)
 - [MongoDB](https://www.mongodb.com/try/download/community)
 - [Swagger](https://swagger.io/)
+- [Jest](https://jestjs.io/pt-BR/)
 
 ### 🔧 Instalação
 
