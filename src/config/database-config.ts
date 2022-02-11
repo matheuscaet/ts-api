@@ -1,7 +1,7 @@
 import  mongoose from "mongoose";
 import { Service } from "typedi"
 import { App } from "./env/app.env";
-import logging from "@config/logging";
+import logging from "@shared/logging";
 @Service()
 export class Database{
 

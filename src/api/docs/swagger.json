@@ -1,0 +1,286 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "Esse serviço foi desenvolvido para inclusão de itens",
+      "version": "1.0.1",
+      "title": "Serviço de Itens"
+    },
+    "host": "localhost:3333",
+    "basePath": "/api",
+    "tags": [
+      {
+        "name": "Itens",
+        "description": "Endpoints voltados aos Itens"
+      }
+    ],
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "paths": {
+      "/itens": {
+        "post": {
+          "tags": [
+            "itens"
+          ],
+          "summary": "Criar Item",
+          "description": "",
+          "operationId": "addItem",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Payload que deve ser enviado para a criação da item",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Item"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Created",
+              "schema": {
+                "$ref": "#/definitions/ItemsResponse"
+              }
+            },
+            "422": {
+              "description": "Invalid input",
+              "schema": {
+                "$ref": "#/definitions/InvalidDataResponse"
+              }
+            }
+          },
+          "security": [
+            {
+              "service_auth": []
+            }
+          ]
+        },
+        "get": {
+          "tags": [
+            "itens"
+          ],
+          "summary": "Listar Itens",
+          "description": "",
+          "operationId": "getItems",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "Ok",
+              "schema": {
+                "$ref": "#/definitions/ItemsResponse"
+              }
+            },
+            "204": {
+              "description": "No content",
+              "schema": {
+              }
+            }
+          },
+          "security": [
+            {
+              "service_auth": []
+            }
+          ]
+        }
+      },
+      "/item/{itemId}": {
+        "get": {
+          "tags": [
+            "item"
+          ],
+          "summary": "Listar Item",
+          "description": "",
+          "operationId": "getItem",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "itemId",
+              "description": "itemId identificador do dado",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Ok",
+              "schema": {
+                "$ref": "#/definitions/ItemsResponse"
+              }
+            },
+            "204": {
+              "description": "No content",
+              "schema": {
+              }
+            }
+          },
+          "security": [
+            {
+              "service_auth": []
+            }
+          ]
+        },
+        "put": {
+          "tags": [
+            "item"
+          ],
+          "summary": "Atualizar Item",
+          "description": "",
+          "operationId": "updateItem",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Payload que deve ser enviado para a atualização do item",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Item"
+              }
+            },
+            {
+              "in": "path",
+              "name": "itemId",
+              "description": "itemId identificador do dado",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Created",
+              "schema": {
+                "$ref": "#/definitions/ItemsResponse"
+              }
+            },
+            "422": {
+              "description": "Invalid input",
+              "schema": {
+                "$ref": "#/definitions/InvalidDataResponse"
+              }
+            }
+          },
+          "security": [
+            {
+              "service_auth": []
+            }
+          ]
+        },
+        "delete": {
+          "tags": [
+            "item"
+          ],
+          "summary": "Excluir Item",
+          "description": "",
+          "operationId": "deleteItem",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "itemId",
+              "description": "tagId identificador do dado",
+              "required": true,
+              "type": "itemId"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No content",
+              "schema": {
+              }
+            }
+          },
+          "security": [
+            {
+              "service_auth": []
+            }
+          ]
+        }
+      }
+    },
+    "securityDefinitions": {
+      "service_auth": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    },
+    "definitions": {
+      "Item": {
+        "type": "object",
+        "required": [
+          "name",
+          "desc"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Name of item"
+          },
+          "desc": {
+            "type": "string",
+            "example": "Description of item"
+          }
+        }
+      },
+      "ItemsResponse":{
+        "type": "object",
+        "properties":{
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "example": "61b76381c539f632f0a5eef3"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Name of item"
+                },
+                "desc": {
+                  "type": "string",
+                  "example": "Description of item"
+                },  
+                "__v": {
+                  "type": "string",
+                  "example": "0"
+                }
+              } 
+            }
+          }
+        }
+      },
+      "InvalidDataResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "{input} is required"
+          }
+        }
+      }
+    }
+  }

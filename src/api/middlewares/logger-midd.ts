@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import logging from "@config/logging";
+import logging from "@shared/logging";
 import { App } from "@config/env/app.env";
 
 export const logRequest = (req : Request, res : Response, next : NextFunction) => {

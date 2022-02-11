@@ -9,6 +9,7 @@
     "baseUrl": "./src",
     "skipLibCheck": true,
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "paths": {
       "@api/*": ["api/*"],
       "@config/*": ["config/*"],

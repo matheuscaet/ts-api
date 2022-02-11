@@ -9,6 +9,7 @@ As tecnologias abaixo foram utilizadas:
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [MongoDB](https://www.mongodb.com/try/download/community)
+- [Swagger](https://swagger.io/)
 
 ### 🔧 Instalação
 
@@ -38,6 +39,14 @@ O preenchimento dessas variáveis são obrigatórias, então segue um exemplo de
 ```bash
 # Execute a aplicação
 $ npm start
+
+```
+
+### 📖 Acessando a documentação
+
+```bash
+# Acesse o link para ver o documentação Swagger
+localhost:3001/api/docs
 
 ```
 
