@@ -3,7 +3,7 @@ import cors from 'cors'
 import { Service } from 'typedi'
 import * as swaggerUi from 'swagger-ui-express'
 import { swagger } from '@config/swagger-config'
-import  { items }  from "@routes/_index"
+import  { users }  from "@routes/_index"
 import { logRequest } from "@middlewares/_index"
 import logging from "@shared/logging";
 import { App } from "@config/env/_index";
@@ -35,7 +35,7 @@ export class ExpressConfig {
   
   private routes() : void {
     this.app
-      .use('/api', items)
+      .use('/api', users)
       .use('/api/docs', swaggerUi.serve, swaggerUi.setup(swagger))
   }
   
