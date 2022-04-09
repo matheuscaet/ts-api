@@ -34,6 +34,7 @@ O preenchimento dessas variáveis são obrigatórias, então segue um exemplo de
 | PORT      | 3001                                                   |
 | URLMONGO  | mongodb+srv://(USER):(PASS)@cluster0.h5mtb.mongodb.net |
 | NAMESPACE | SERVER                                                 |
+| API_TOKEN | key                                                    |
 
 ### 🎲 Rodando o Back End (servidor)
 

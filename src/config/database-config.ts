@@ -9,7 +9,7 @@ export class Database{
         mongoose
             .connect(App.URLMONGO)
             .then((result) => {
-                logging.info(App.NAMESPACE, `Database Connected`)
+                logging.info(App.NAMESPACE, `Database Connected v${result.version}`)
             })
             .catch((error) => {
                 logging.error(App.NAMESPACE, `Database error: ${error.message}`)
