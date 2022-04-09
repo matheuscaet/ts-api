@@ -2,10 +2,10 @@
     "swagger": "2.0",
     "info": {
       "description": "Esse serviço foi desenvolvido para inclusão de itens",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "title": "Serviço de Itens"
     },
-    "host": "localhost:3333",
+    "host": "localhost:3001",
     "basePath": "/api",
     "tags": [
       {
