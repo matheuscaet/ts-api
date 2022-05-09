@@ -1,1 +1,1 @@
-export * from './items-controller'
+export * from './items.controller'
