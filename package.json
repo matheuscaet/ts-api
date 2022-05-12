@@ -4,8 +4,9 @@
   "main": "server.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./lib",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./lib/src",
     "start": "node -r tsconfig-paths/register -r ts-node/register ./src/api/server.ts",
+    "startnode": "node ./lib/src/api/server.js",
     "start:dev": "nodemon src/api/server.ts",
     "ts:watch": "tsc --watch",
     "test": "jest"

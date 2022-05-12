@@ -6,21 +6,22 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "baseUrl": "./src",
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
     "paths": {
-      "@api/*": ["api/*"],
-      "@config/*": ["config/*"],
-      "@core/*": ["core/*"],
-      "@shared/*": ["shared/*"],
-      "@domain/*": ["core/domain/*"],
-      "@middlewares/*": ["api/middlewares/*"],
-      "@routes/*": ["api/routes/*"],
-      "@logic/*": ["api/logic/*"],
-      "@controllers/*": ["api/controllers/*"],
-      "@env/*": ["config/env/*"]
+      "@api/*": ["./src/api/*"],
+      "@config/*": ["./src/config/*"],
+      "@core/*": ["./src/core/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@domain/*": ["./src/core/domain/*"],
+      "@middlewares/*": ["./src/api/middlewares/*"],
+      "@routes/*": ["./src/api/routes/*"],
+      "@logic/*": ["./src/api/logic/*"],
+      "@controllers/*": ["./src/api/controllers/*"],
+      "@env/*": ["./src/config/env/*"]
     }
   }
 }
